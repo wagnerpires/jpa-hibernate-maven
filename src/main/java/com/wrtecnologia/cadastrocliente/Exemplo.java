@@ -17,7 +17,7 @@ public class Exemplo {
         //  Cliente cliente = entityManager.find(Cliente.class, 1);
         //  System.out.println(cliente.getNome());
 
-        // INSERIR
+        // INSERÇÃO COM PERSIST
         //  Cliente cliente = new Cliente();
         //  //cliente.setId(1);
         //  cliente.setNome("Eletro Silva");
@@ -35,7 +35,7 @@ public class Exemplo {
         //  Cliente cliente3 = entityManager.find(Cliente.class, 1);
         //  Cliente cliente2 = entityManager.find(Cliente.class, 1);
 
-//        // UPDATE 1
+        // UPDATE 1
 //        Cliente cliente4 = entityManager.find(Cliente.class, 4);
 //        entityManager.getTransaction().begin();
 //        cliente4.setNome("Casa de Carnes Souza");
@@ -48,18 +48,16 @@ public class Exemplo {
 //        entityManager.getTransaction().begin();
 //        entityManager.merge(cliente);
 //        entityManager.getTransaction().commit();
-//        entityManager.close();
-//        entityManagerFactory.close();
 
-        // INSERT 2 - INSERIR COM MERGE
+        // INSERÇÃO COM MERGE
         Cliente cliente = new Cliente();
         // cliente.setId(5);
         cliente.setNome("Padaria Miramar");
         entityManager.getTransaction().begin();
         entityManager.merge(cliente);
         entityManager.getTransaction().commit();
+
         entityManager.close();
         entityManagerFactory.close();
-
     }
 }
